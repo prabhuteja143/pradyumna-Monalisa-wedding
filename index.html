@@ -12,6 +12,8 @@
 	<meta name="keywords" content="Marriage, Love , Enagaged" />
 	<meta name="author" content="Pradyumna" />
 
+<!-- favicon -->
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
 
 
   	<!-- Facebook and Twitter integration -->
@@ -59,7 +61,7 @@
 	</head>
 	<body>
 		
-		<audio loop autoplay>
+		<audio autoplay>
 			<source src="audio/bgm.mp3" type="audio/mpeg">
 		</audio>
 
@@ -109,7 +111,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner"   style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner"   style="background-image:url(../images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -127,7 +129,7 @@
 		</div>
 	</header>
 
-	<div id="fh5co-couple"  class="fh5co-cover" style="background-image: url(images/copule-bg.jpg);background-size: auto;background-repeat: round;">
+	<div id="fh5co-couple"  class="fh5co-cover" style="background-image: url(../images/copule-bg.jpg);background-size: auto;background-repeat: round;">
 		<!-- <div class="overlay"></div> -->
 		<div class="container-fluid">
 			<div class="row">
@@ -160,11 +162,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10 text-center col-md-offset-1">
-				<p class="couple-below-head" style="margin-top: 2.5em;">"We are so looking forward to starting this new chapter together, and can’t wait to celebrate with all of our favourite people"</p>
-			</div>
-					
-				
+		</div>
+		<div class="col-md-10 text-center col-md-offset-1">
+			<p class="couple-below-head" style="margin-top: 2.5em;">"We are so looking forward to starting this new chapter together, and can’t wait to celebrate with all of our favourite people"</p>
 		</div>
 		
 	</div>
@@ -209,7 +209,7 @@
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Friday 11</span>
+										<span>Saturday 12</span>
 										<span>December, 2020</span>
 									</div>
 									<p>Please Join us to celebrate our reception. At- Sagara, Narasinghpur, Odisha, India </p>
@@ -461,7 +461,7 @@
 						<div class="col-md-3 col-sm-3">
 							<div class="form-group">
 								<label for="event_drp" class="label-color">I Am Attending...</label>
-								<select name="event_drp" onchange="myFunction()" id="event_drp" class="form-control">
+								<select name="event_drp" onchange="myFunction()" id="event_drp" class="form-control" style="font-weight: 600;color: #000;">
 								  <option value="All">All Events</option>
 								  <option value="marriage">Marriage</option>
 								  <option value="reception">Reception</option>
@@ -487,14 +487,14 @@
 				<div class="col-md-12 text-center">
 					<p>
 						<!--<small class="block">&copy; 2020 All Rights Reserved.</small> -->
-						<small class="block">Designed by  Prabhu Teja</small>
+						<small class="block">Designed by  PrabhuTeja K <a href="https://techprabhu.in/" target="_blank">www.techprabhu.in</a></small>
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="https://twitter.com/prabhuteja143" target="_blank"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/prabhuteja143" target="_blank"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/prabhu-teja-katakam-74218542/" target="_blank"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://dribbble.com/Prabhuteja" target="_blank"><i class="icon-dribbble"></i></a></li>
 						</ul>
 					</p>
 				</div>
@@ -553,7 +553,7 @@
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbxjQwsgRJNoVwoXec-o7fA-mLnpGCXYVqVxTqBOThgMpl36SaFC/exec'
             const form = document.forms['RSVP']
             form.addEventListener('submit', e => {
-              if (!validate()) {
+				if (!validate()) {
 				e.preventDefault()
 				document.getElementById("name").className = "validate_input";
 				document.getElementById("phone").className  = "validate_input";
@@ -593,6 +593,7 @@ function alertFunc() {
   document.getElementById("btn_submit").disabled = false;
   document.querySelector('#btn_submit').innerText = 'I am Attending';
 }
+
 
 
 			
