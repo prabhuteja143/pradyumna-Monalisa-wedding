@@ -134,7 +134,7 @@
 				<div class="col-md-12  text-center fh5co-heading animate-box fadeInUp animated-fast">
 					<h2>Hello!</h2>
 					<h3>December 09th, 2020 Narasinghpur, Odisha</h3>
-					<p>We invited you to celebrate our wedding ceremony...</p>
+					<p>We invite you to celebrate our wedding ceremony...</p>
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
@@ -553,16 +553,45 @@
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbxjQwsgRJNoVwoXec-o7fA-mLnpGCXYVqVxTqBOThgMpl36SaFC/exec'
             const form = document.forms['RSVP']
             form.addEventListener('submit', e => {
+              if (!validate()) {
+				e.preventDefault()
+				document.getElementById("name").className = "validate_input";
+				document.getElementById("phone").className  = "validate_input";
+				setTimeout(bck_normal,400);
+			} else {
+			  quick_action(),
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for your response..! We Will Contact You Soon..."))
+                .then(response => submit_response())
                 .catch(error => console.error('Error!', error.message))
+            }
             })
 document.getElementById("event").value = document.getElementById("event_drp").value
 function myFunction(){
 var old_val = document.getElementById("event_drp").value;
 var new_val =document.getElementById("event").value;
 document.getElementById("event").value = old_val;
+}
+function validate(){
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+if (name == "" | phone ==""){ return false} else {return true}
+}
+function bck_normal(){
+document.getElementById("name").className = "form-control";
+document.getElementById("phone").className  = "form-control";
+}
+function submit_response(){
+alertFunc();
+}
+function quick_action() {
+  document.querySelector('#btn_submit').innerText = 'Thank You';
+  document.getElementById("btn_submit").disabled = true;
+}
+
+function alertFunc() {
+  document.getElementById("btn_submit").disabled = false;
+  document.querySelector('#btn_submit').innerText = 'I am Attending';
 }
 
 
