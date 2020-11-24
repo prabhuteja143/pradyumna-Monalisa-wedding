@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 100vh;
+    height: auto;
   }
 }
 .fh5co-cover .display-t,
@@ -1847,6 +1847,7 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+
 .validate_input{
 	background: rgba(255, 0, 0, 0.2);
 	border: none !important;
@@ -1857,5 +1858,6 @@ form label {
 	-o-transition: 0.5s;
 	transition: 0.5s;
 }
+
 
 /*# sourceMappingURL=style.css.map */
